@@ -1,26 +1,29 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
 {
-    int min, num1, num2, num3;
-    std::cout
-        << "Enter the first number: ";
-    std::cin >> num1;
-    std::cout << "Enter the second number: ";
-    std::cin >> num2;
-    std::cout << "Enter the third number: ";
-    std::cin >> num2;
-    if (num1 <= num2 && num1 <= num3)
-    {
-        min = num1;
-    }
-    else if (num2 <= num1 && num2 <= num3)
+    // Declare variables
+    int num1, num2, num3, min;
+    //User input
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    cout << "Enter the third number: ";
+    cin >> num3;
+    min = num1;
+    //Logic
+    if (num2 < min)
     {
         min = num2;
     }
-    else if (num3 <= num1 && num3 <= num2)
+    if (num3 < min)
     {
         min = num3;
     }
-    std::cout << "The smaller number is: " << min << std::endl;
+    //Output
+    cout << "The smaller of the three is " << min;
+    return 0;
 }
